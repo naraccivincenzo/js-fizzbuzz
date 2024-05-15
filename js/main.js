@@ -18,3 +18,26 @@ for (let i = 1; i <= 100; i++) {
         console.log(i);
     }
 }
+// Same sa before but with DOM (Bonus Track :-))
+const ul = document.getElementById("list");
+for (let i = 1; i <= 100; i++) {
+    const li = document.createElement("li");
+    if (i % 3 === 0 && i % 5 === 0) {
+        li.innerText = "FizzBuzz";
+        ul.append(li);
+        console.log("Fizz Buzz");
+    } else if (i % 3 === 0) {
+        li.innerText = "Fizz";
+        ul.append(li);
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        li.innerText = "Buzz";
+        ul.append(li);
+        console.log("Buzz");
+    } else {
+        li.innerText = i;
+        ul.append(li);
+        console.log(i);
+    }
+}
+
